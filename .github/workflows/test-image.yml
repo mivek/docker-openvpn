@@ -37,7 +37,7 @@ jobs:
         run: |
           docker inspect ${{ steps.meta.outputs.tags }}
           docker run --rm ${{ steps.meta.outputs.tags }} openvpn --version
-          docker run --rm ${{ steps.meta.outputs.tags }} openssl --version
+          docker run --rm ${{ steps.meta.outputs.tags }} openssl version
 
       - name: Test the image
         run: |
